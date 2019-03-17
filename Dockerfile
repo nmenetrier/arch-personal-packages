@@ -9,6 +9,5 @@ RUN useradd -m packager && \
                           neko \
                           make gcc libvorbis sdl2 glu openal libuv
 
-COPY . /home/packager
+VOLUME [ "/packaging" ]
 
-RUN chown -R packager:packager /home/packager

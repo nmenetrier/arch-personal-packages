@@ -1,0 +1,9 @@
+version: '3'
+services:
+  packaging:
+    build: .
+    volumes:
+      - .:/packaging
+    entrypoint: /usr/bin/env bash
+    stdin_open: true
+    tty: true
