@@ -1,0 +1,34 @@
+# Maintainer: Nicolas Ménétrier <nicolas.menetrier@gmail.com>
+
+pkgname=hashlink-haxe-4
+pkgver=1.9
+pkgrel=1
+epoch=
+pkgdesc="An open-source high-level multiplatform programming language and compiler that can produce applications and source code for many different platforms from a single code-base"
+arch=('x86_64')
+url="https://github.com/HaxeFoundation/haxe"
+license=('GPL2' 'MIT')
+groups=('devel')
+depends=('haxe-4')
+makedepends=('make' 'gcc' 'libvorbis' 'sdl2' 'glu' 'openal' 'libuv')
+provides=('hashlink-haxe-4')
+conflicts=('hashlink' 'haxe' 'hashlink-haxe-4')
+source=("https://github.com/HaxeFoundation/hashlink/archive/$pkgver.tar.gz")
+sha256sums=("ca546563273f1188ffddaa171d3c34e671efdc346d4985154c0da5a74161e8a4")
+validpgpkeys=()
+
+prepare() {
+	tar xzf "$pkgver.tar.gz"
+}
+
+build() {
+	pushd "hashlink-$pkgver"
+	make
+	popd
+}
+
+package() {
+	pushd "hashlink-$pkgver"
+	make INSTALL_DIR="$pkgdir/usr" install
+	popd
+}
