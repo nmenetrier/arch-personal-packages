@@ -4,7 +4,7 @@
 Available packages for now:
 
 * Hashlink 1.9
-* Haxe 4.0-rc1 (needed for hashlink 1.9)
+* Haxe 4.0.0-rc1 (needed for hashlink 1.9)
 
 The Dockerfile is for testing purpose: dependencies check, installation tests, ...
 
