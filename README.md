@@ -1,6 +1,5 @@
 
-My personal PKGBUILDs repository
-================================
+## My personal PKGBUILDs repository for Archlinux
 
 Available packages for now:
 
@@ -9,8 +8,7 @@ Available packages for now:
 
 The Dockerfile is for testing purpose: dependencies check, installation tests, ...
 
-hashlink / haxe 4
------------------
+### hashlink / haxe 4
 
 The purpose here is to have the latest released & coherent versions of haxe & hashlink.
 
