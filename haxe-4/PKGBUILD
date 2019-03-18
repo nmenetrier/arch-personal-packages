@@ -10,8 +10,7 @@ url="https://github.com/HaxeFoundation/haxe"
 license=('GPL2' 'MIT')
 groups=('devel')
 depends=('neko')
-provides=('haxe-4')
-conflicts=('haxe-4' 'haxe')
+conflicts=('haxe-4' 'haxe' 'haxe-git')
 source=("haxe.sh"
         "https://github.com/HaxeFoundation/haxe/releases/download/${pkgver//_/-}/haxe-${pkgver//_/-}-linux64.tar.gz")
 sha256sums=("da08272cf61872f3401ad8b9f0bf94a4b2bfbaeb7b65644ee822f4ac8aaaed10"
